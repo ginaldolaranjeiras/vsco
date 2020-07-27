@@ -1,21 +1,57 @@
 import 'package:flutter/material.dart';
-import 'package:vsco/models/post.dart';
 
 class PostPage extends StatelessWidget {
-  final Post post;
+  Image image;
+  String texto;
+  String titulo;
+  DateTime date;
 
-  const PostPage({Key key, this.post}) : super(key: key);
+  PostPage({
+    this.image,
+    this.texto,
+    this.titulo,
+    this.date,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Column(
-        children: [
-          Text(post.data.toString()),
-          Text(post.titulo),
-          Text(post.texto),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              child: image,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Column(
+                children: [
+                  Text(
+                    titulo,
+                    textScaleFactor: 2,
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Divider(),
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      date.toString(),
+                      textAlign: TextAlign.right,
+                    ),
+                  ),
+                  Text(
+                    texto,
+                    textAlign: TextAlign.justify,
+                  )
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

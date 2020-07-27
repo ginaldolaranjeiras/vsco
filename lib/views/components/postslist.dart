@@ -18,7 +18,7 @@ class PostsList extends StatelessWidget {
           titulo: post.titulo,
           texto: post.texto,
           date: DateTime.now(),
-          image: null,
+          image: post.images,
         );
       }).toList(),
     );

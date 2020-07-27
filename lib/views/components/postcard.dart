@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vsco/views/pages/postpage.dart';
 
 class PostCard extends StatelessWidget {
   Image image;
@@ -41,7 +42,6 @@ class PostCard extends StatelessWidget {
             ),
             Divider(),
             TextButton(
-              onPressed: () {},
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
                 child: Align(
@@ -49,6 +49,17 @@ class PostCard extends StatelessWidget {
                   child: Text(
                     'Ler Mais',
                     textScaleFactor: 1.5,
+                  ),
+                ),
+              ),
+              onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => PostPage(
+                    date: date,
+                    image: image,
+                    texto: texto,
+                    titulo: titulo,
                   ),
                 ),
               ),

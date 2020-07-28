@@ -3,29 +3,33 @@ import 'package:vsco/models/partida.dart';
 import 'package:vsco/models/partidas.dart';
 import 'package:vsco/views/components/card_resultado.dart';
 
-class PartidasList extends StatelessWidget {
+class PartidasList extends StatefulWidget {
   Partida partida;
-
   PartidasList({
     Key key,
     this.partida,
   }) : super(key: key);
 
   @override
+  _PartidasListState createState() => _PartidasListState();
+}
+
+class _PartidasListState extends State<PartidasList> {
+  @override
   Widget build(BuildContext context) {
     return ListView(
-        padding: EdgeInsets.all(8),
-        children: partidas.map((partida) {
-          CardResultados(
-            statuspartida: partida.statuspartida,
-            nomecampeonato: partida.campeonato,
-            timecasa: partida.mandante.nome,
-            timefora: partida.visitante.nome,
-            escudocasa: partida.mandante.escudo,
-            escudofora: partida.visitante.escudo,
-            golscasa: partida.placarcasa,
-            golsfora: partida.placarvisitante,
-          );
-        }).toList());
+      children: partidas.map((partida) {
+        return CardResultados(
+          statuspartida: partida.statuspartida,
+          nomecampeonato: partida.campeonato,
+          timecasa: partida.mandante.nome,
+          timefora: partida.visitante.nome,
+          escudocasa: partida.mandante.escudo,
+          escudofora: partida.visitante.escudo,
+          golscasa: partida.placarcasa,
+          golsfora: partida.placarvisitante,
+        );
+      }).toList(),
+    );
   }
 }

@@ -5,7 +5,12 @@ import 'package:vsco/views/screens/placar.dart';
 import 'package:vsco/views/screens/socio.dart';
 import 'package:vsco/views/screens/time.dart';
 
-class VscoHomePage extends StatelessWidget {
+class VscoHomePage extends StatefulWidget {
+  @override
+  _VscoHomePageState createState() => _VscoHomePageState();
+}
+
+class _VscoHomePageState extends State<VscoHomePage> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(

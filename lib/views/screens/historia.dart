@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Historia extends StatelessWidget {
-  const Historia({
+  Historia({
     Key key,
   }) : super(key: key);
 

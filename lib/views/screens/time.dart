@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Time extends StatelessWidget {
-  const Time({
+  Time({
     Key key,
   }) : super(key: key);
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class PostPage extends StatelessWidget {
+class PostPage extends StatefulWidget {
   Image image;
   String texto;
   String titulo;
@@ -14,6 +14,11 @@ class PostPage extends StatelessWidget {
   });
 
   @override
+  _PostPageState createState() => _PostPageState();
+}
+
+class _PostPageState extends State<PostPage> {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
@@ -22,14 +27,14 @@ class PostPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              child: image,
+              child: widget.image,
             ),
             Padding(
-              padding: const EdgeInsets.all(20.0),
+              padding: EdgeInsets.all(20.0),
               child: Column(
                 children: [
                   Text(
-                    titulo,
+                    widget.titulo,
                     textScaleFactor: 2,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
@@ -39,12 +44,12 @@ class PostPage extends StatelessWidget {
                   Align(
                     alignment: Alignment.centerRight,
                     child: Text(
-                      date.toString(),
+                      widget.date.toString(),
                       textAlign: TextAlign.right,
                     ),
                   ),
                   Text(
-                    texto,
+                    widget.texto,
                     textAlign: TextAlign.justify,
                   )
                 ],

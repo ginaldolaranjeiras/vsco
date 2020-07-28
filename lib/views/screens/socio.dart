@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Socio extends StatelessWidget {
-  const Socio({
+  Socio({
     Key key,
   }) : super(key: key);
 

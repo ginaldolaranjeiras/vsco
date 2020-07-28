@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vsco/views/pages/postpage.dart';
 
-class PostCard extends StatelessWidget {
+class PostCard extends StatefulWidget {
   Image image;
   String texto;
   String titulo;
@@ -16,11 +16,16 @@ class PostCard extends StatelessWidget {
   }) : super(key: key);
 
   @override
+  _PostCardState createState() => _PostCardState();
+}
+
+class _PostCardState extends State<PostCard> {
+  @override
   Widget build(BuildContext context) {
     return Card(
       elevation: 3,
       child: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: EdgeInsets.all(20.0),
         child: Column(
           children: [
             Container(
@@ -29,11 +34,11 @@ class PostCard extends StatelessWidget {
                   width: 0.5,
                 ),
               ),
-              child: image,
+              child: widget.image,
             ),
             Divider(),
             Text(
-              titulo,
+              widget.titulo,
               textScaleFactor: 2,
               textAlign: TextAlign.justify,
               style: TextStyle(
@@ -43,7 +48,7 @@ class PostCard extends StatelessWidget {
             Divider(),
             TextButton(
               child: Padding(
-                padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+                padding: EdgeInsets.fromLTRB(0, 0, 20, 0),
                 child: Align(
                   alignment: Alignment.centerRight,
                   child: Text(
@@ -56,10 +61,10 @@ class PostCard extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => PostPage(
-                    date: date,
-                    image: image,
-                    texto: texto,
-                    titulo: titulo,
+                    date: widget.date,
+                    image: widget.image,
+                    texto: widget.texto,
+                    titulo: widget.titulo,
                   ),
                 ),
               ),

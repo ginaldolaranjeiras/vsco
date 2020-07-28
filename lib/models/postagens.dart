@@ -12,13 +12,15 @@ List<Post> postagens = [
   Post(
     data: DateTime.now(),
     images: Image.asset('assets/images/vasco_disputa.png'),
-    titulo: 'Nova Postagem 1',
-    texto: 'Texto da nova postagem 1.',
+    titulo: 'Ataque do Vasquinho é o Melhor da Competição',
+    texto:
+        'Com dois dos maiores artilheiros da competição o Vasco é o mais eficiente em saldo de gol.',
   ),
   Post(
     data: DateTime.now(),
     images: Image.asset('assets/images/vasco_gol.png'),
-    titulo: 'Nova Postagem 2',
-    texto: 'Texto da nova postagem 2.',
+    titulo: 'Vasco Vence Santa Cruz port 3 x 1. Acompanhe o Resumo da Partida',
+    texto:
+        'Após abrir o placar no primeiro tempo o vasco sofreu o empate. No segundo tempo o time garantiu a vitória com dois gols do volante do time',
   ),
 ];

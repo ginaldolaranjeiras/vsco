@@ -50,4 +50,12 @@ List<Partida> partidas = [
     placarvisitante: 2,
     statuspartida: 'Encerrada',
   ),
+  Partida(
+    campeonato: 'Copa das Favelas',
+    statuspartida: 'Encerrada',
+    mandante: vasco,
+    visitante: visitante,
+    placarcasa: 7,
+    placarvisitante: 0,
+  ),
 ];

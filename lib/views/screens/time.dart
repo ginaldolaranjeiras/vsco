@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vsco/views/components/jogador_card.dart';
 
 class Time extends StatelessWidget {
   Time({
@@ -7,16 +8,12 @@ class Time extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Container(
-            alignment: Alignment.topCenter,
-            child: Text('Corpo do aplicativo'),
-          ),
-        ],
-      ),
+    return ListView(
+      children: [
+        JogadorCard(),
+        JogadorCard(),
+        JogadorCard(),
+      ],
     );
   }
 }

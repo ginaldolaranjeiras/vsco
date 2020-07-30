@@ -10,7 +10,7 @@ class TimeVsco {
 }
 
 TimeVsco vasco = TimeVsco(
-  nome: 'Vasco',
+  nome: 'Vasquinho',
   escudo: Image.asset(
     'assets/images/escudo_vasco.png',
   ),

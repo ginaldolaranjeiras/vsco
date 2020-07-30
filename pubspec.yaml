@@ -54,6 +54,14 @@ flutter:
     - assets/images/escudo_generico.png
     - assets/images/campo.png
     - assets/images/camisa.png
+    - assets/images/jogador1.png
+    - assets/images/jogador2.png
+    - assets/images/jogador3.png
+    - assets/images/jogador4.png
+    - assets/images/jogador5.png
+    - assets/images/jogador6.png
+    - assets/images/jogador7.png
+    - assets/images/jean.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

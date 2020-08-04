@@ -31,7 +31,7 @@ List<Jogador> jogadores = [
     camisa: 3,
     posicao: 'Zagueiro',
     escalacao: 'Primeiro Quadro Titilar',
-    jogadorimage: Image.asset('assets/images/jean.png'),
+    jogadorimage: Image.asset('assets/images/jogador3.png', fit: BoxFit.cover),
   ),
   Jogador(
     jogadornome: 'Filipe Maylon',

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vsco/models/partida.dart';
 import 'package:vsco/models/partidas.dart';
-import 'package:vsco/views/components/card_resultado.dart';
+import 'package:vsco/views/components/resultadocard.dart';
 
 class PartidasList extends StatefulWidget {
   Partida partida;

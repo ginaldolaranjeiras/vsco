@@ -21,7 +21,10 @@ class _PostPageState extends State<PostPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text('Notícias'),
+        centerTitle: true,
+      ),
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(20.0),
@@ -35,8 +38,16 @@ class _PostPageState extends State<PostPage> {
                 ),
               ),
               Divider(),
-              Container(
-                child: widget.image,
+              Center(
+                child: ConstrainedBox(
+                  constraints: BoxConstraints(
+                    maxHeight: 800,
+                    maxWidth: 800,
+                  ),
+                  child: Container(
+                    child: widget.image,
+                  ),
+                ),
               ),
               Divider(),
               Padding(

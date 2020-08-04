@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:vsco/models/postagens.dart';
+import 'package:vsco/views/pages/postpage.dart';
 
 class Historia extends StatelessWidget {
   Historia({
@@ -7,16 +9,11 @@ class Historia extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Container(
-            alignment: Alignment.topCenter,
-            child: Text('Corpo do aplicativo'),
-          ),
-        ],
-      ),
+    return PostPage(
+      date: DateTime.now(),
+      image: postagens[3].images,
+      titulo: postagens[3].titulo,
+      texto: postagens[3].texto,
     );
   }
 }

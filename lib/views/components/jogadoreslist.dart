@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vsco/models/jogador.dart';
 import 'package:vsco/models/jogadores.dart';
-import 'package:vsco/views/components/jogador_card.dart';
+import 'package:vsco/views/components/jogadorcard.dart';
 
 class JogadoresList extends StatelessWidget {
   Jogador jogador;

@@ -28,13 +28,23 @@ class _PostCardState extends State<PostCard> {
         padding: EdgeInsets.all(20.0),
         child: Column(
           children: [
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  width: 0.5,
+            Center(
+              child: ConstrainedBox(
+                constraints: BoxConstraints(
+                  minHeight: 100,
+                  minWidth: 150,
+                  maxHeight: 600,
+                  maxWidth: 650,
+                ),
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      width: 0.5,
+                    ),
+                  ),
+                  child: widget.image,
                 ),
               ),
-              child: widget.image,
             ),
             Divider(),
             Text(
